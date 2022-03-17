@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<mavlink>
+    <include>common.xml</include>
+    <dialect>0</dialect>
+    <enums>
+        <enum name="MAV_VEHICLE_CONDITION" bitmask="true">
+            <entry value="1" name="MAV_VEHICLE_CONDITION_GLOBAL_POSITION">
+                <description>0x01 global position</description>
+            </entry>
+            <entry value="2" name="MAV_VEHICLE_CONDITION_LOCAL_POSITION">
+                <description>0x02 local position</description>
+            </entry>
+            <entry value="4" name="MAV_VEHICLE_CONDITION_LOCAL_VELOCITY">
+                <description>0x04 local velocity</description>
+            </entry>
+            <entry value="8" name="MAV_VEHICLE_CONDITION_LOCAL_ALTITUDE">
+                <description>0x08 local altitude</description>
+            </entry>
+        </enum>
+    </enums>
+    <messages>
+        <message id="180" name="VEHICLE_STATUS">
+            <description>vehicle status flags</description>
+            <field type="uint32_t" name="condition" enum="MAV_VEHICLE_CONDITION" display="bitmask" print_format="0x%04x"></field>
+        </message>
+    </messages>
+</mavlink>
+
