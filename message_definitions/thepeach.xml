@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <mavlink>
     <include>common.xml</include>
-    <dialect>0</dialect>
+    <dialect>2</dialect>
     <enums>
         <enum name="MAV_VEHICLE_CONDITION" bitmask="true">
             <entry value="1" name="MAV_VEHICLE_CONDITION_GLOBAL_POSITION">
